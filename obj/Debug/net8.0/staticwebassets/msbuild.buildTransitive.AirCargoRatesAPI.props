@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\AirCargoRatesAPI.props" />
+</Project>
