@@ -28,16 +28,16 @@ namespace AirCargoRatesAPI.Controllers
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     await conn.OpenAsync();
-                    return Ok("✅ Connection to SQL Server successful.");
+                    return Ok("Connection to SQL Server successful.");
                 }
             }
             catch (SqlException ex)
             {
-                return StatusCode(500, $"❌ SQL Exception: {ex.Message}");
+                return StatusCode(500, $"SQL Exception: {ex.Message}");
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"❌ General Exception: {ex.Message}");
+                return StatusCode(500, $"General Exception: {ex.Message}");
             }
         }
 
@@ -58,11 +58,11 @@ namespace AirCargoRatesAPI.Controllers
                         {
                             if (await reader.ReadAsync())
                             {
-                                return Ok("✅ Table exists and has data.");
+                                return Ok("Table exists and has data.");
                             }
                             else
                             {
-                                return Ok("⚠️ Table exists but has no data.");
+                                return Ok("Table exists but has no data.");
                             }
                         }
                     }
@@ -70,11 +70,11 @@ namespace AirCargoRatesAPI.Controllers
             }
             catch (SqlException ex)
             {
-                return StatusCode(500, $"❌ SQL Exception: {ex.Message}");
+                return StatusCode(500, $"SQL Exception: {ex.Message}");
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"❌ General Exception: {ex.Message}");
+                return StatusCode(500, $"General Exception: {ex.Message}");
             }
         }
     }
