@@ -13,7 +13,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000","https://apiaircargorates.azurewebsites.net")
+            policy.WithOrigins("https://aircargorates.azurewebsites.net","http://localhost:3000","https://apiaircargorates.azurewebsites.net")
                   .AllowAnyMethod()
                   .AllowAnyHeader()
                   .AllowCredentials();
